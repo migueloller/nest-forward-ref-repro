@@ -11,3 +11,5 @@ export class AService {
     return this.bService.hello();
   }
 }
+
+console.log({ BService }, 'forcing a circular dependency here');

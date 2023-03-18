@@ -1,4 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
+import { BService } from './b/b.service';
 import { AService } from './a/a.service';
 
 @Controller()
@@ -10,3 +11,5 @@ export class AppController {
     return this.aService.hello();
   }
 }
+
+console.log({ BService }, 'forcing a circular dependency here');
